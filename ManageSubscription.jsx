@@ -5,74 +5,74 @@ function ManageSubscription() {
     { date: "ABC", amount: "₹00000", status: "Paid", invoice: "Download" },
     { date: "ABC", amount: "₹00000", status: "Paid", invoice: "Download" },
     { date: "ABC", amount: "₹00000", status: "Paid", invoice: "Download" },
-  ]
+  ];
 
   return (
-    <div className="max-w-4xl mx-auto border-4 border-[#1e90ff] rounded-md bg-white p-6 sm:p-8 text-black">
-      <h1 className="font-semibold text-lg sm:text-xl mb-1 text-black">
+    <div className="max-w-2xl mx-auto border border-gray-300 rounded-lg bg-white p-12 shadow-lg font-sans text-gray-800">
+      <h1 className="font-extrabold text-3xl mb-6 text-gray-900">
         Manage Subscriptions
       </h1>
-      <p className="text-xs mb-6 max-w-3xl text-gray-600">
+      <p className="text-base mb-12 max-w-xl text-gray-600">
         Easily control your subscription preferences here – update your plan, change billing info, or cancel anytime with just a few clicks.
       </p>
       <section
         aria-label="Subscription details"
-        className="bg-[#f5faff] rounded-md p-4 sm:p-6 mb-8 grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-y-2 gap-x-4 max-w-3xl"
+        className="bg-gray-50 rounded-lg p-8 mb-14 grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-y-5 gap-x-10 max-w-xl"
       >
-        <div className="text-xs text-gray-600">Your Name</div>
-        <div className="text-xs font-semibold text-black text-right sm:text-left">
+        <div className="text-base text-gray-600">Your Name</div>
+        <div className="text-base font-semibold text-gray-900 text-right sm:text-left">
           XYZ
         </div>
-        <div className="text-xs text-gray-600">Plan</div>
-        <div className="text-xs font-semibold text-black text-right sm:text-left">
+        <div className="text-base text-gray-600">Plan</div>
+        <div className="text-base font-semibold text-gray-900 text-right sm:text-left">
           XYZ
         </div>
-        <div className="text-xs text-gray-600">Class</div>
-        <div className="text-xs font-semibold text-black text-right sm:text-left">XYZ</div>
-        <div className="text-xs text-gray-600">Billing Cycle</div>
-        <div className="text-xs font-semibold text-black text-right sm:text-left">
+        <div className="text-base text-gray-600">Class</div>
+        <div className="text-base font-semibold text-gray-900 text-right sm:text-left">XYZ</div>
+        <div className="text-base text-gray-600">Billing Cycle</div>
+        <div className="text-base font-semibold text-gray-900 text-right sm:text-left">
           XYZ
         </div>
-        <div className="text-xs text-gray-600">Next Billing Date</div>
-        <div className="text-xs font-semibold text-black text-right sm:text-left">
+        <div className="text-base text-gray-600">Next Billing Date</div>
+        <div className="text-base font-semibold text-gray-900 text-right sm:text-left">
           XYZ
         </div>
       </section>
-      <section aria-label="Billing History" className="max-w-4xl">
-        <h2 className="font-semibold text-sm mb-2 text-black">Billing History</h2>
-        <table className="w-full border-collapse text-xs text-gray-600">
+      <section aria-label="Billing History" className="max-w-2xl">
+        <h2 className="font-extrabold text-xl mb-6 text-gray-900">Billing History</h2>
+        <table className="w-full border-collapse text-base text-gray-700">
           <thead>
-            <tr className="bg-[#0d6efd] text-white text-left text-[11px]">
-              <th className="py-2 px-3 rounded-tl-md">Date</th>
-              <th className="py-2 px-3">Amount</th>
-              <th className="py-2 px-3">Status</th>
-              <th className="py-2 px-3 rounded-tr-md">Invoice</th>
+            <tr className="bg-blue-600 text-white text-left text-base">
+              <th className="py-4 px-6 rounded-tl-lg">Date</th>
+              <th className="py-4 px-6">Amount</th>
+              <th className="py-4 px-6">Status</th>
+              <th className="py-4 px-6 rounded-tr-lg">Invoice</th>
             </tr>
           </thead>
           <tbody>
             {billingHistory.map(({ date, amount, status, invoice }, i) => (
               <tr
                 key={i}
-                className={`border border-t-0 border-l-0 border-r-0 border-gray-300`}
+                className="border border-t-0 border-l-0 border-r-0 border-gray-300"
               >
-                <td className="py-2 px-3">{date}</td>
-                <td className="py-2 px-3 font-semibold text-black">{amount}</td>
-                <td className="py-2 px-3">{status}</td>
-                <td className="py-2 px-3 text-[#0d6efd] underline cursor-pointer">{invoice}</td>
+                <td className="py-4 px-6">{date}</td>
+                <td className="py-4 px-6 font-semibold text-gray-900">{amount}</td>
+                <td className="py-4 px-6">{status}</td>
+                <td className="py-4 px-6 text-blue-600 underline cursor-pointer">{invoice}</td>
               </tr>
             ))}
           </tbody>
         </table>
-        <div className="mt-6 flex justify-end space-x-3 max-w-xs">
+        <div className="mt-12 flex justify-end space-x-6 max-w-xs">
           <button
             type="button"
-            className="text-[#0d6efd] bg-[#dbeafe] text-xs font-normal rounded-md px-3 py-1.5 hover:bg-[#c7ddfc] focus:outline-none"
+            className="text-blue-600 bg-blue-100 text-base font-semibold rounded-lg px-6 py-3 hover:bg-blue-200 focus:outline-none"
           >
             Cancel Plan
           </button>
           <button
             type="button"
-            className="bg-[#0d6efd] text-white text-xs font-normal rounded-md px-4 py-1.5 hover:bg-[#0b5ed7] focus:outline-none"
+            className="bg-blue-600 text-white text-base font-semibold rounded-lg px-8 py-3 hover:bg-blue-800 focus:outline-none"
           >
             Manage Subscription
           </button>
